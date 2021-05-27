@@ -129,16 +129,55 @@ function capturarValor(){
             d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
             d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
         }else{
+            //if(valorN > arbolito.raiz.valor){
+                //valoresArbolito.push(valorN);
+                //arbolito.añadirElemento(valorN);
+                //d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "orange");
+                //d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+            //}else{
+                //valoresArbolito.push(valorN);
+                //arbolito.añadirElemento(valorN);
+                //d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "blue");
+                //d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+            //}
             if(valorN > arbolito.raiz.valor){
-                valoresArbolito.push(valorN);
-                arbolito.añadirElemento(valorN);
-                d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "orange");
-                d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                if(!arbolito.punteroDerecha){
+                    valoresArbolito.push(valorN);
+                    arbolito.añadirElemento(valorN);
+                    d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "orange");
+                    d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                }else{
+                    if(valorN > arbolito.punteroDerecha.valor){
+                        valoresArbolito.push(valorN);
+                        arbolito.añadirElemento(valorN);
+                        d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "blue");
+                        d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                    }else{
+                        valoresArbolito.push(valorN);
+                        arbolito.añadirElemento(valorN);
+                        d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "yellow");
+                        d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                    }
+                }
             }else{
-                valoresArbolito.push(valorN);
-                arbolito.añadirElemento(valorN);
-                d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "blue");
-                d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                if(!arbolito.punteroIzquierda){
+                    valoresArbolito.push(valorN);
+                    arbolito.añadirElemento(valorN);
+                    d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "red");
+                    d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                }else{
+                    if(valorN > arbolito.punteroIzquierda.valor){
+                        valoresArbolito.push(valorN);
+                        arbolito.añadirElemento(valorN);
+                        d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "blue");
+                        d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                    }else{
+                        valoresArbolito.push(valorN);
+                        arbolito.añadirElemento(valorN);
+                        d3.select("body").append("svg").attr("width", 60).attr("height", 60).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "yellow");
+                        d3.select("body").append('text').text(valorN).attr('y', 50).attr('x', 30);
+                    }
+                }
             }
         }
     }
