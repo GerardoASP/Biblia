@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>Quiz 2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row center">
+            <h2>Programa Funciones Quiz 2</h2>
+        </div>
+
+        <div class="row">
+            <h5>Seccion Aleatoria</h5>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s3">
+                <input type="number" name="tamA" id="tamA">
+                <label for="tamA">Digite el tamaño del Array: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="llenarArrayAleatorio()">Aceptar</button>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="mostrarArrayUno()">Mostrar-Array</button>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                Array Resultante: 
+                <div class="input-field inline">
+                    <output id="arrayS"></output>
+                    <label for=""></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5>Seccion allThings</h5>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                Array Base:
+                <div class="input-field inline">
+                    <output id="allThingsBase"></output>
+                    <label for=""></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field inline">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="agregarValores()">AgregarValores</button>
+            </div>
+            <div class="input-field inline">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="eliminarInicioArray()">EliminarInicio</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                Array Nuevo:
+                <div class="input-field inline">
+                    <output id="allThingsNew"></output>
+                    <label for=""></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5>Seccion Array Invertido</h5>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s2">
+                <input type="number" name="valorU" id="valorU">
+                <label for="valorU">Digite un valor: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="agregarDato()">AgregarValor</button>
+        </div>
+
+        <div class="row">
+            <div class="input-field inline">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="mostrarArrayInicial()">MostrarFormaBase</button>
+            </div>
+            <div class="input-field inline">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="mostrarArrayInverso()">MostrarFormaInversa</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                El array queda de la siguiente manera: 
+                <div class="input-field inline">
+                    <output id="arrayEspecial"></output>
+                    <label for=""></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5>Seccion Cadenas</h5>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="cadenaU" id="cadenaU">
+                <label for="cadenaU">Digite una cadena de Texto: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="separadorU" id="separadorU">
+                <label for="separadorU">Digite el separador de cadenas: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="dividirCadena()">AceptarCadena</button>
+        </div>
+
+        <div class="row">
+            <output id="cadenaEspecial"></output>
+            <label for=""></label>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src="js/soporteQ2.js"></script>
+</html>
