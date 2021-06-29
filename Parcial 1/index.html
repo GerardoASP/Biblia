@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>Parcial 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s2">
+                <input type="number" name="numeroU" id="numeroU">
+                <label for="numeroU">Digite el numero a buscar: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="mostrarMensajeN()">Buscar</button>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <output id="mostrarN"></output>
+                <label for=""></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5>Seccion SuperHeroes</h5>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="nombreSP" id="nombreSP">
+                <label for="nombreSP">Digite el nombre del super heroe: </label>
+            </div>
+            <div class="input-field inline col s4">
+                <input type="text" name="aliasSP" id="aliasSP">
+                <label for="aliasSP">Digite el alias del super heroe: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="number" name="nivelPoderSP" id="nivelPoderSP">
+                <label for="nivelPoderSP">Digite el nivel de poder: </label>
+            </div>
+            <div class="input-field inline col s4">
+                <input type="text" name="universoSP" id="universoSP">
+                <label for="universoSP">Digite el nombre del Universo: </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="text" name="razaSP" id="razaSP">
+                <label for="razaSP">Digite la raza del super heroe: </label>
+            </div>
+        </div>
+
+        <div class="row center">
+            <button class="btn waves-effect waves-light" type="submit" name="action" onclick="mostrarArregloSuperH()">Mostrar-Array-Objetos</button>
+            <div class="input-field inline">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="agregarHeroe()">AgregarAlFinal</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <output id="arregloSP"></output>
+                <label for=""></label>
+            </div>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src="js/soporteParcial.js"></script>
+</html>
